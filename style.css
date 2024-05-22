@@ -5,14 +5,19 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    font-family: poppins;
     background-color: #1E024A;
     scroll-behavior: smooth;
 }
 
+:root {
+  --main-bg-color:#1E024A ;
+  --main-font-color:white;
+  --main-button-color:#A0A8F5;
+  --shadow:#3d4586;
+}
 header {
-    background-color: #1E024A;
+    background-color: var(--main-bg-color);
     display: flex;
     justify-content: space-between;
     padding: 2rem;
@@ -21,14 +26,14 @@ header {
 header .h2 {
     display: flex;
     align-items: center;
-    color: #ffffff;
+    color: var(--main-font-color);
 }
 
 h2{
-    color: #ffffff;
+    color: var(--main-font-color);
     font-size: 2rem bold;
 }
-header nav {
+header nav #links{
     display: flex;
     align-items: center;
     
@@ -39,6 +44,8 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    gap: 30px;
+    padding-right: 80px;
 }
 
 header nav ul li {
@@ -47,7 +54,7 @@ header nav ul li {
 }
 
 header nav a {
-    color: #ffffff;
+    color: var(--main-font-color);
     text-decoration: none;
 }
 
@@ -55,7 +62,7 @@ header nav a {
     display: flex;
     height: 900px;
     padding: 0 2rem;
-    background-color: #1E024A;
+    background-color: var(--main-bg-color);
   }
   
   .main img {
@@ -70,27 +77,21 @@ header nav a {
     margin: 0;
   }
   
-  .main h1 {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
-
-    text-align: center;
-    width: 100%;
-  }
-  
   .main h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
     text-align: center;
     width: 100%;
+    
   }
   
   .main p {
-    font-size: 3rem;
+    font-size: x-large;
     text-align: center;
     width: 100%;
+    
   }
   
   .text {
@@ -99,7 +100,7 @@ header nav a {
     justify-content: center;
     width: 50%;
     height: 800px;
-    color: #ffffff;
+    color: var(--main-font-color);
   }
   
   .image {
@@ -112,30 +113,35 @@ header nav a {
   
   .image img{
     border-radius: 0px 0px 0px 150px; 
-  box-shadow: 0px 0px 0px 0px #A0A8F5, 40px -40px 15px #A0A8F5;
+  box-shadow: 40px -40px 0px #3d4586;
   width: 60%;
   height: 60vh;
+  object-fit: cover;
+  min-width: 400px;
   }
   .buttons-container {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 10px;
-    margin-right: 20px;
+    margin-top: 70px;
+    gap: 100px;
+  
   }
   
   .buttons {
     padding: 15px 30px;
-    background-color: #A0A8F5;
-    color: white;
+    background-color: var(--main-button-color);
+    color: var(--main-font-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 25px;
     margin-right: 15px;
+    box-shadow: 5px 5px 0px  #3d4586;
   }
   
   .about{
-    background-color: #A0A8F5;
+    background-color: var(--main-button-color);
     margin-top: 0px;
   }
   .aboutText{
@@ -143,7 +149,7 @@ header nav a {
     flex-direction: column;
     justify-content: center;
     margin-left: 60px;
-    color: #ffffff;
+    color: var(--main-font-color);
     height: 900px;
   }
   .about h1{
@@ -169,8 +175,8 @@ header nav a {
   }
   .hireMe {
     padding: 15px 30px;
-    background-color: #1E024A;
-    color: white;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -182,7 +188,7 @@ header nav a {
     height: 100px;
   }
 .myprojects h1{
-  color: white;
+  color: var(--main-font-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,9 +201,10 @@ header nav a {
   align-items: center;
   justify-content: center;
   gap: 50px;
-  margin-top: 50px;
   padding: 20px;
-  color: #ffffff;
+  color: var(--main-font-color);
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .carousel-item {
@@ -222,8 +229,18 @@ header nav a {
 
 
 @media screen and (max-width: 768px) {
+    .nav{
+      float: right;
+    }
     .logo h2 {
         font-size: 1em; 
+      }
+      .header nav ul li{
+        margin-right: 0px;
+      }
+
+      .header nav ul{
+        gap: 5px;
       }
 
       nav a {
@@ -259,20 +276,25 @@ header nav a {
         height: 200px;
     }
     .image{
-        width: 100%;
         height: 250px;
     }
     .image img{
         height: 200px;
-        width: 50%;
+        object-fit: cover;
+        min-width: 150px;
         margin-right: 25px;
         border-radius: 0px 0px 0px 100px; 
-  box-shadow: 0px 0px 0px 0px #A0A8F5, 15px -15px 15px #A0A8F5;
+  box-shadow:15px -15px 0px #A0A8F5;
     }
     .buttons{
         padding: 5px 10px;
         font-size: 1rem;
     }
+
+    .buttons-container{
+      gap: 0px;
+    }
+
     .about{
         margin-top: 250px;
         height: 300px;
@@ -284,6 +306,7 @@ header nav a {
 
     .aboutText{
       margin-left: 3px;
+      height: 300px;
     }
     .aboutText h1{
       display: flex;
@@ -316,13 +339,32 @@ header nav a {
     padding: 5px 10px;
     margin-bottom: 10px;
    }
+    
+   .myprojects{
+    height: 75px;
+   }
+   .myprojects h1{
+    font-size: 1.5rem;
+   }
+   .carousel {
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 200px;
+    
+  }
 
+  .carousel-item {
+    min-width: 100%;
+    font-size: 0.5rem;
   }
-  .projects{
-    width: 50%;
-    height: 100px;
-    font-size: 1rem;
+  .carousel-item h3{
+    font-size: 0.5rem;
   }
+
+.carousel-item p{
+  font-size: 0.5rem;
+}
   
   @media screen and (max-width: 480px) {
     .main {
@@ -337,3 +379,4 @@ header nav a {
       font-size: 0.8rem;
     }
   }
+}  

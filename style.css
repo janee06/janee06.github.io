@@ -233,8 +233,8 @@ header nav a {
     grid-template-columns: auto auto auto ;
     gap: 5px;
     align-items: center;
-    justify-content: space-between;
-    column-gap: 550px;
+    justify-content: space-evenly;
+    column-gap: 500px;
     padding: 15px;
     margin: 40px;
     color: var(--main-font-color);
@@ -270,7 +270,6 @@ header nav a {
   .footer-links {
     display: flex;
     align-items: center;
-    justify-content: center;
     list-style: none;
     padding: 0;
     display: flex;
@@ -434,6 +433,7 @@ header nav a {
 
 @media screen and (max-width: 800px) {
   .hamburger {
+  
     display: flex;
     justify-content: space-between;
     z-index: 100;
@@ -446,23 +446,18 @@ header nav a {
   }
 
   .menu {
+    display: grid;
     position: fixed;
     transform: translateY(-100%);
     transition: transform 0.2s;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     background: var(--main-bg-color);
     color: white;
-    list-style: none;
-    padding-top: 4rem;
   }
   .menuItem{
-    display: row;
-   flex-direction: row;
-   align-items: center;
-  font-size: 2rem;
+  font-size: 1rem;
   }
 
   .showMenu {
@@ -475,9 +470,7 @@ header nav a {
         margin-right: 0px;
       }
 
-      .header nav ul{
-        gap: 5px;
-      }
+      
 
       nav a {
         font-size: 0.5em; 
@@ -618,6 +611,68 @@ header nav a {
     .carousel p{
       font-size: 0.5rem;
     }
+
+   
+    
+    .social-icons {
+      margin-bottom: 10px;
+    }
+  
+    .footer-button {
+      padding: 8px 15px;
+      font-size: 12px;
+    }
+  .footer-logo{
+    display: none;
+    font-size: 1rem;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: none;
+    display: grid;
+    width: 50%;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-5px);
+  }
+  
+  .footer-line {
+    width: 100%;
+    height: 1px;
+    background-color:var(--main-font-color);
+    margin: 20px 0;
+  }
+  
+  .footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .footer-button {
+
+    background-color:var(--main-button-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: auto;
+  }
 }
   @media screen and (max-width: 480px) {
     .main {

@@ -287,8 +287,8 @@ header nav a:hover{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0;
-    margin-left: 300px;
     font-size: 1.3rem;
+    margin-left: 15px;
   }
   
   .footer-links li {
@@ -318,9 +318,22 @@ header nav a:hover{
     align-items: center;
     justify-content: center;
     margin-top: 15px;
+    gap: 35px;
+    margin-right: 25px;
   }
+  .social-icons img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    
+  }
+   
   
   .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
     margin-right: 10px;
     font-size: 20px;
     color: var(--main-font-color);
@@ -443,6 +456,9 @@ header nav a:hover{
   }
   .footer-links{
     margin-left: 20px;
+  }
+  .social-icons img{
+    height: 30px;
   }
 }
 
@@ -688,6 +704,9 @@ header nav a:hover{
     cursor: pointer;
     font-size: 14px;
     margin-left: auto;
+  }
+  .social-icons img{
+    height: 25px;
   }
 }
   @media screen and (max-width: 480px) {

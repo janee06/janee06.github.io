@@ -169,9 +169,7 @@ header nav a {
     flex-direction: column;
     margin-left: 60px;
     color: var(--main-font-color);
-    height: 800px;
-    padding: 50px;
-    margin: 40px;
+    height: 900px;
   }
   .about h1{
     margin-bottom: 25px;
@@ -203,7 +201,7 @@ header nav a {
     margin-right: 20px;
   }
   .hireMe {
-    padding: 25px 80px;
+    padding: 15px 30px;
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
     border: none;

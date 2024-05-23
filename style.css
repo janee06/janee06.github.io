@@ -218,46 +218,40 @@ header nav a {
   .myprojects{
     height: 100px;
   }
-.myprojects h1{
-  color: var(--main-font-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-}
+  .myprojects h1{
+    color: var(--main-font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    margin-top: 35px;
+  }
+    
+  .carousel {
+    height: 700px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 550px;
+    padding: 15px;
+    margin: 40px;
+    color: var(--main-font-color);
+  }
   
-.carousel {
-  height: 700px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  padding: 20px;
-  color: var(--main-font-color);
-  overflow-x: auto;
-  overflow-y: hidden;
-}
+  .carousel h3{
+    font-size: 2.5rem;
+  }
+  .carousel p{
+    font-size: 1.7rem;
+  }
+  .projectLinks{
+    text-decoration: none;
+    color: var(--main-font-color);
+  }
 
-.carousel-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  scroll-snap-align: center;
-  min-width: 300px;
-  text-align: left;
-}
-
-.carousel-item img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.carousel-description {
-  padding: 10px;
-  font-size: 2rem;
-}
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1224px){
   .about{
     margin-top: 250px;
     display: flex;
@@ -319,6 +313,24 @@ header nav a {
       object-fit: cover;
       min-width: 150px;
       margin-left: 0px;
+  }
+
+  .myprojects h1{
+    font-size: 3rem;
+  }
+  .carousel{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+  }
+  .carousel h3{
+    font-size: 1.7rem;
+  }
+  .carousel p{
+    font-size: 1.5rem;
   }
 }
 
@@ -491,33 +503,24 @@ header nav a {
         min-width: 150px;
         margin-left: 0px;
     }
+    .myprojects h1{
+      font-size: 1.5rem;
     }
-   .myprojects{
-    height: 75px;
-   }
-   .myprojects h1{
-    font-size: 1.5rem;
-   }
-   .carousel {
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 200px;
-    
-  }
-
-  .carousel-item {
-    min-width: 100%;
-    font-size: 0.5rem;
-  }
-  .carousel-item h3{
-    font-size: 0.5rem;
-  }
-
-.carousel-item p{
-  font-size: 0.5rem;
+    .carousel{
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .carousel h3{
+      font-size: 0.5rem;
+    }
+    .carousel p{
+      font-size: 0.5rem;
+    }
 }
-  
   @media screen and (max-width: 480px) {
     .main {
       height: 30vh;

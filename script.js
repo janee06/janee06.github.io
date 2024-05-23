@@ -17,3 +17,20 @@ function toggleMenu() {
 }
 
 hamburger.addEventListener("click", toggleMenu);
+
+$(document).ready(function() {
+  $("#carousel-container .owl-carousel").owlCarousel({
+    items: 3,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      }
+    }
+  });
+});

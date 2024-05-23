@@ -145,48 +145,73 @@ header nav a {
     box-shadow: 5px 5px 0px  #3d4586;
   }
   
+  .projectsbuttons{
+    padding: 15px 30px;
+    background-color: #545d9e;
+    color: var(--main-font-color);
+    border: none;
+    border-radius: 8px;
+    border: #A0A8F5 3px solid;
+    border-color: var(--main-button-color);
+    cursor: pointer;
+    font-size: 25px;
+    margin-right: 15px;
+    box-shadow: 5px 5px 0px  #3d4586;
+  }
   .about{
     background-color: var(--main-button-color);
     margin-top: 0px;
+    display: flex;
+    align-items: center;
   }
   .aboutText{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin-left: 60px;
     color: var(--main-font-color);
-    height: 900px;
+    height: 800px;
+    padding: 50px;
+    margin: 40px;
   }
   .about h1{
+    margin-bottom: 25px;
     font-size: 4rem;
     margin-top: 60px;
   }
   .about p{
+    margin-bottom: 25px;
     font-size: 1.7rem;
   }
 
   .aboutImg{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 50px 50px 50px 50px; 
-    box-shadow: 5px 5px 5px ;
+    display: block;
+    margin-left: 300px;
+  }
+  .aboutImg img{
+    height: 450px;
+    min-width: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 10px 10px 3px #3d4586;
+    margin: 50px;
   }
 
   .hireMe-container {
     display: flex;
+    border-radius: 50px 50px 50px 50px; 
     margin-top: 10px;
     margin-right: 20px;
   }
   .hireMe {
-    padding: 15px 30px;
+    padding: 25px 80px;
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 30px;
     margin-right: 15px;
+    box-shadow: 7px 7px 2px  #3d4586;
   }
 
   .myprojects{
@@ -231,13 +256,75 @@ header nav a {
   padding: 10px;
   font-size: 2rem;
 }
+@media screen and (max-width: 1024px){
+  .about{
+    margin-top: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-button-color);
+   
+  }
 
+  .aboutText{
+    display: flex;
+    height: 600px;
+   padding: 0px;
+   margin: 10px;
+   flex-direction: left;
+  }
+  .aboutText h1{
+    display: flex;
+      font-size: 3rem;
+  }
+  .TextButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutText p{
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 15px;
+      font-size: 1.7rem;
+  }
+  .hireMe-container
+  {
+    display: flex;
+    align-items: center;
+    
+}
+ .hireMe{
+  margin-left: 30px;
+  font-size: 1rem;
+  padding: 20px 35px;
+  margin-bottom: 10px;
+ }
+  .aboutImg{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+  }
+  .aboutImg img{
+    flex-direction: column;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      object-fit: cover;
+      min-width: 150px;
+      margin-left: 0px;
+  }
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .hamburger {
     display: flex;
-    align-items: end;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 100;
     top: 1rem;
     margin-left: 170px;
@@ -333,24 +420,32 @@ header nav a {
     .buttons-container{
       gap: 0px;
     }
+    .projectsbuttons{
+      padding: 5px 10px;
+      font-size: 1rem;
+    }
 
     .about{
-        margin-top: 250px;
-        height: 300px;
-        display: flex;
+      margin-top: 250px;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-    
+      background-color: var(--main-button-color);
+      text-align: center;
     }
 
     .aboutText{
-      margin-left: 3px;
-      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+     padding: 0px;
+     margin: 10px;
+     flex-direction: center;
     }
     .aboutText h1{
       display: flex;
-      align-items: center;
-      justify-content: center;
         font-size: 1.5rem;
     }
     .TextButton{
@@ -370,7 +465,7 @@ header nav a {
     {
       display: flex;
       align-items: center;
-      justify-content: center;
+      
   }
    .hireMe{
     margin-left: 30px;
@@ -378,7 +473,24 @@ header nav a {
     padding: 5px 10px;
     margin-bottom: 10px;
    }
-    
+    .aboutImg{
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0px;
+    }
+    .aboutImg img{
+      flex-direction: column;
+      height: 170px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        object-fit: cover;
+        min-width: 150px;
+        margin-left: 0px;
+    }
+    }
    .myprojects{
     height: 75px;
    }
@@ -418,4 +530,3 @@ header nav a {
       font-size: 0.8rem;
     }
   }
-}  

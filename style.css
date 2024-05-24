@@ -141,7 +141,8 @@ header nav a:hover{
   .buttons-container .projectsbuttons a:hover{
     color: var(--main-bg-color);
   }
-  .buttons {
+
+  .contactbuttons{
     padding: 15px 30px;
     background-color: var(--main-button-color);
     color: var(--main-font-color);
@@ -149,10 +150,12 @@ header nav a:hover{
     border-radius: 8px;
     cursor: pointer;
     font-size: 25px;
-    margin-right: 15px;
+    margin-right: 15px;text-decoration: none;
+    color: var(--main-font-color);
     box-shadow: 5px 5px 0px  #3d4586;
+
   }
-  .buttons a{
+  .contactbuttons a{
     text-decoration: none;
     color: var(--main-font-color);
   }
@@ -160,7 +163,7 @@ header nav a:hover{
     color: var(--main-bg-color);
   }
   .projectsbuttons{
-    padding: 15px 30px;
+    padding: 15px 25px;
     background-color: #545d9e;
     color: var(--main-font-color);
     border: none;
@@ -376,7 +379,66 @@ header nav a:hover{
     color: var(--main-bg-color);
   }
   
+@media screen and (max-width: 1500px){
+  .about{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-button-color);
+   
+  }
 
+  .aboutText{
+    display: flex;
+    height: 600px;
+   padding: 0px;
+   margin-left: 45px;
+   flex-direction: left;
+  }
+  .aboutText h1{
+    display: flex;
+      font-size: 2.5rem;
+  }
+  .TextButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutText p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .hireMe-container
+  {
+    display: flex;
+    align-items: center;
+    
+}
+ .hireMe{
+  font-size: 1.3rem;
+  padding: 25px 30px;
+  margin-bottom: 10px;
+ }
+ .aboutImg{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+}
+.aboutImg img{
+  flex-direction: column;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    object-fit: cover;
+    min-width: 150px;
+    margin-left: 0px;
+}
+  }
 @media screen and (max-width: 1224px){
   .logo h2 {
     font-size: 1em; 
@@ -431,11 +493,11 @@ header nav a:hover{
   border-radius: 0px 0px 0px 100px; 
   box-shadow:15px -15px 0px #3d4586;
 }
-.buttons{
+.projectsbuttons {
   padding: 10px 2.5px;
   font-size: 1rem;
 }
-.buttons a{
+.projectsbuttons a{
   padding: 10px 10px;
   font-size: 1rem;
 }
@@ -443,12 +505,22 @@ header nav a:hover{
   margin-top: 20;
   gap: 0px;
 }
-.projectsbuttons{
+.projectsbuttons a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 5px;
+  
+}
+.contactbuttons{
+  padding: 10px 1px;
+}
+.contactbuttons a {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px 10px;
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
   .about{
     margin-top: 250px;
@@ -540,43 +612,71 @@ header nav a:hover{
 @media screen and (max-width: 900px) {
   .hamburger {
     display: flex;
-    right: 1rem; 
-    top: 1rem;
+    right: 0; 
+    top: 0;
     padding: 4px;
     color: white;
     background: transparent;
     z-index: 100;
   }
+  
  .closeIcon{
   position: fixed;
   right: 2rem;
+  font-size: 24px;
+  cursor: pointer;
+ }
+ .closed{
+  background-color: var(--shadow);
+ }
+ .links{
+  z-index: 0;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  text-align: center;
  }
   .menu {
     display: grid;
     position: fixed;
     transform: translateY(-100%);
-    transition: transform 0.2s;
     top: 0;
     left: 0;
     right: 0;
     background: var(--main-bg-color);
+    box-shadow: 0 0 10px 0  #3d4586;
     color: white;
   }
+  
   .menuItem{
-  font-size: 1rem;
-  margin-left: 10px;
+   font-size: 1rem;
+   margin-left: 10px;
+  }
+  .menuItem a{
+    margin-top: 50px;
   }
   .showMenu {
     transform: translateY(0);
+    padding-right: 0px;
   }
+  
 
     .logo h2 {
         font-size: 1em; 
       }
-      .header nav ul li{
-        margin-right: 0px;
+      .header nav ul{
+        padding-right: 0px;
+        margin-top: 25px;
+        gap: 20px;
       }
-
+      .header nav ul li{
+      margin-top: 25px;
+      margin-right: 0px;
+      }
+    
+      
       nav a {
       font-size: 0.5em; 
       padding: 0.3em; 
@@ -621,24 +721,29 @@ header nav a:hover{
       border-radius: 0px 0px 0px 100px; 
       box-shadow:15px -15px 0px #3d4586;
     }
-    .buttons{
-      padding: 10px 10px;
-      font-size: 1rem;
-    }
-    .buttons a{
-      padding: 10px 7px;
-      font-size: 1rem;
-    }
-
-    .buttons-container{
-      gap: 0px;
-    }
-    .projectsbuttons{
+    .contactbuttons {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 5px 10px;
-      font-size: 1.7rem;
+      font-size: 0.7rem;
+      padding: 10px 1px;
+    }
+     .contactbuttons a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 10px;
+      font-size: 0.7rem;
+     }
+    .buttons-container{
+      gap: 0px;
+    }
+    .projectsbuttons a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 5px;
+      font-size: 0.7rem;
     }
 
     .about{

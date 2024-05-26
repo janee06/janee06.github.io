@@ -259,6 +259,16 @@ header nav a:hover{
     color: var(--main-font-color);
     
   }
+
+  .project-box {
+    flex: 1;
+    height: 500px;
+    display: flex;
+    align-items: last baseline;
+    border: 1px solid var(--main-font-color);
+    border-radius: 5px;
+    overflow: hidden;
+  }
   .carousel h3{
     font-size: 1.7rem;
   }
@@ -437,6 +447,9 @@ header nav a:hover{
     object-fit: cover;
     min-width: 150px;
     margin-left: 0px;
+}
+.project-box{
+  height: 300px;
 }
   }
 @media screen and (max-width: 1224px){
@@ -620,24 +633,29 @@ header nav a:hover{
     z-index: 100;
   }
   
- .closeIcon{
-  position: fixed;
-  right: 2rem;
-  font-size: 24px;
-  cursor: pointer;
- }
- .closed{
-  background-color: var(--shadow);
- }
- .links{
-  z-index: 0;
-  margin-top: 25px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
-  text-align: center;
- }
+  .closeIcon{
+    position: fixed;
+    right: 2rem;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .menuIcon {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .links{
+    z-index: 0;
+    margin-top: 25px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
   .menu {
     display: grid;
     position: fixed;
@@ -651,16 +669,20 @@ header nav a:hover{
   }
   
   .menuItem{
-   font-size: 1rem;
-   margin-left: 10px;
+    font-size: 1rem;
+    margin-left: 10px;
   }
+  
   .menuItem a{
     margin-top: 50px;
   }
+  
   .showMenu {
     transform: translateY(0);
     padding-right: 0px;
   }
+
+
   
 
     .logo h2 {
@@ -821,6 +843,9 @@ header nav a:hover{
       justify-content: center;
       gap: 25px;
       padding: 20px;
+    }
+    .project-box{
+      height: 200px;
     }
     .carousel h3{
       font-size: 0.5rem;

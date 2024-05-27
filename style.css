@@ -35,6 +35,12 @@ h2{
     font-size: 2rem bold;
 }
 
+.menu-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 
 header nav #links{
     display: flex;
@@ -49,6 +55,9 @@ header nav ul  {
     padding: 0;
     gap: 30px;
     padding-right: 80px;
+}
+.menu-container{
+  background-color: var(--main-bg-color);
 }
 .hamburger {
   display: none;
@@ -237,7 +246,7 @@ header nav a:hover{
     color: var(--main-button-color);
   }
   .myprojects{
-    height: 200px;
+    height: 100px;
   }
   .myprojects h1{
     color: var(--main-font-color);
@@ -261,7 +270,6 @@ header nav a:hover{
   }
 
   .project-box {
-    flex: 1;
     height: 500px;
     display: flex;
     align-items: last baseline;
@@ -623,34 +631,54 @@ header nav a:hover{
 }
 
 @media screen and (max-width: 900px) {
-  .hamburger {
+  .menu-container {
     display: flex;
-    right: 0; 
+    align-items: center;
+    position: relative;
+    background-color: var(--main-bg-color);
+  }
+  .hamburger {
+    position: absolute;
     top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     padding: 4px;
     color: white;
     background: transparent;
     z-index: 100;
   }
-  
-  .closeIcon{
+ 
+  .closeIcon {
     position: fixed;
     right: 2rem;
+    display: none;
     font-size: 24px;
     cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .closeIcon.is-active {
+    display: block;
   }
   
   .menuIcon {
     position: fixed;
     right: 2rem;
     top: 2rem;
+    display: block;
     font-size: 24px;
     cursor: pointer;
+    margin: 0 10px;
   }
   
-  .links{
+  .menuIcon.is-active {
+    display: none;
+  }
+  .links {
     z-index: 0;
-    margin-top: 25px;
+    margin-top: 60px; 
     padding: 20px;
     margin: 0 auto;
     text-align: center;
@@ -664,7 +692,7 @@ header nav a:hover{
     left: 0;
     right: 0;
     background: var(--main-bg-color);
-    box-shadow: 0 0 10px 0  #3d4586;
+    box-shadow: 0  0 10px 0px  #3d4586;
     color: white;
   }
   
@@ -673,7 +701,7 @@ header nav a:hover{
     margin-left: 10px;
   }
   
-  .menuItem a{
+  .menu a{
     margin-top: 50px;
   }
   
@@ -697,7 +725,9 @@ header nav a:hover{
       margin-top: 25px;
       margin-right: 0px;
       }
-    
+      .header nav ul li a{
+        margin-top: 30px;
+      }
       
       nav a {
       font-size: 0.5em; 

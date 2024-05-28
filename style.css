@@ -250,22 +250,34 @@ header nav a:hover {
 .carousel {
     height: 700px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     grid-template-columns: auto auto auto;
     align-items: center;
     justify-content: center;
-    column-gap: 100px;
     padding: 15px;
     color: var(--main-font-color);
 }
-
-.project-box {
-    height: 500px;
-    display: flex;
-    align-items: last baseline;
-    border: 1px solid var(--main-font-color);
-    border-radius: 5px;
-    overflow: hidden;
+.carousel-item {
+    height: 300px;
+    flex: 1 0 300px;
+    max-width: 310px;
+    background-color: var(--main-button-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+.carousel-item img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    min-width: 150px;
+}
+
 .carousel h3 {
     font-size: 1.7rem;
 }
@@ -585,12 +597,14 @@ footer {
         font-size: 2.5rem;
     }
     .carousel {
-        height: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 25px;
         padding: 20px;
+    }
+    .carousel-item img {
+        object-fit: cover;
     }
     .carousel h3 {
         font-size: 1.5rem;
@@ -846,15 +860,22 @@ footer {
         font-size: 1.5rem;
     }
     .carousel {
-        height: 200px;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 25px;
-        padding: 20px;
+        padding: 5px;
     }
-    .project-box {
+    .carousel-item {
         height: 200px;
+        max-width: 150px;
+    }
+    .carousel-item img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        object-fit: cover;
+        min-width: 100px;
+        height: 80px;
     }
     .carousel h3 {
         font-size: 0.5rem;

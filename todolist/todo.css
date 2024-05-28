@@ -1,0 +1,152 @@
+.root {
+    --main-bg-color: #1e024a;
+    --main-font-color: white;
+    --main-button-color: #a0a8f5;
+}
+body {
+    background-color: #1e024a;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 20px;
+    font-family: poppins;
+    color: #fff;
+}
+.main-wraper {
+    color: #fff;
+}
+.container {
+    background-color: #1e024a;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 600px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 0 0 20px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.todo-form {
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+.todo-input::placeholder {
+    color: #a0a8f5;
+}
+.todo-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding: 10px 0;
+}
+.todo-items li {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+.todo-item {
+    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-text {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.delete {
+    display: flex;
+    font-size: 24px;
+    margin-left: auto;
+    justify-content: right;
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 35px;
+    cursor: pointer;
+}
+.delete-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+.add-todo {
+    justify-content: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.add-todo i {
+    margin-right: 10px;
+}
+
+.checkmark {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+.checkmark.checked {
+    background-color: #a0a8f5;
+}
+.checkmark::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.checkmark.checked::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+.checkmark.checked i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -24,7 +24,29 @@ body {
     text-align: center;
     text-decoration: none;
 }
+.page {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 0 10px 0 0;
+}
 
+.back a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.back a:hover {
+    color: #a0a8f5;
+}
 .title {
     font-size: 3rem;
     margin: 0 0 20px;

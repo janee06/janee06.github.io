@@ -236,7 +236,7 @@ header nav a:hover {
     color: var(--main-button-color);
 }
 .myprojects {
-    height: 100px;
+    margin-top: 50px;
 }
 .myprojects h1 {
     color: var(--main-font-color);
@@ -248,7 +248,7 @@ header nav a:hover {
 }
 
 .carousel {
-    height: 700px;
+    height: 900px;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
@@ -259,13 +259,14 @@ header nav a:hover {
     color: var(--main-font-color);
 }
 .carousel-item {
-    height: 300px;
+    height: 500px;
     flex: 1 0 300px;
-    max-width: 280px;
-    background-color: var(--main-button-color);
+    width: 400px;
+    max-width: 400px;
+    background-color: var(--shadow);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     border-radius: 10px;
+    padding: 10px;
     transition: transform 0.3s ease-in-out;
 }
 .carousel-item:hover {
@@ -275,10 +276,10 @@ header nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150px;
     width: 100%;
     object-fit: cover;
     min-width: 150px;
+    height: 200px;
 }
 
 .carousel h3 {
@@ -606,6 +607,10 @@ footer {
         gap: 25px;
         padding: 20px;
     }
+    .carousel-item {
+        height: 350px;
+        width: 300px;
+    }
     .carousel-item img {
         object-fit: cover;
     }
@@ -649,6 +654,7 @@ footer {
         position: absolute;
         right: 0;
         flex: 1;
+        padding-right: 30px;
     }
 
     .closeIcon {
@@ -862,15 +868,10 @@ footer {
     .myprojects h1 {
         font-size: 1.5rem;
     }
-    .carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px;
-    }
+
     .carousel-item {
-        height: 200px;
-        max-width: 150px;
+        height: 270px;
+        width: 200px;
     }
     .carousel-item img {
         display: flex;
@@ -878,13 +879,13 @@ footer {
         justify-content: center;
         object-fit: cover;
         min-width: 100px;
-        height: 80px;
+        height: 150px;
     }
     .carousel h3 {
-        font-size: 0.5rem;
+        font-size: 1.3rem;
     }
     .carousel p {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 
     .social-icons {

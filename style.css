@@ -948,7 +948,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
     .main {
-        height: 30vh;
+        height: 40vh;
     }
 
     .main h1 {

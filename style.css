@@ -454,9 +454,6 @@ footer {
         min-width: 150px;
         margin-left: 0px;
     }
-    .project-box {
-        height: 300px;
-    }
 }
 @media screen and (max-width: 1224px) {
     .logo h2 {
@@ -467,7 +464,7 @@ footer {
     }
 
     nav a {
-        font-size: 0.5em;
+        font-size: 0.7em;
         padding: 0.3em;
     }
 
@@ -554,6 +551,7 @@ footer {
         padding: 0px;
         margin: 10px;
         flex-direction: left;
+        margin-left: 10px;
     }
     .aboutText h1 {
         display: flex;
@@ -745,7 +743,6 @@ footer {
     }
 
     .main {
-        height: 60vh;
         display: flex;
         flex-wrap: wrap;
         align-items: column;

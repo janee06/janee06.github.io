@@ -272,6 +272,9 @@ header nav a:hover {
     transform: scale(1.05);
 }
 .carousel-item img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 150px;
     width: 100%;
     object-fit: cover;

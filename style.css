@@ -415,7 +415,7 @@ footer {
     }
     .aboutText h1 {
         display: flex;
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
     .TextButton {
         display: flex;
@@ -625,6 +625,9 @@ footer {
     .social-icons img {
         height: 30px;
     }
+    .footer-button {
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -788,7 +791,7 @@ footer {
         align-items: center;
         justify-content: center;
         padding: 3px 10px;
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
     .buttons-container {
         gap: 0px;
@@ -798,7 +801,7 @@ footer {
         align-items: center;
         justify-content: center;
         padding: 3px 5px;
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     .about {
@@ -843,7 +846,7 @@ footer {
     }
     .hireMe {
         border-radius: 7px;
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 10px 20px;
         margin-bottom: 10px;
     }
@@ -891,10 +894,6 @@ footer {
         margin-bottom: 10px;
     }
 
-    .footer-button {
-        padding: 8px 15px;
-        font-size: 12px;
-    }
     .footer-logo {
         display: none;
         font-size: 1rem;
@@ -942,7 +941,7 @@ footer {
         padding: 10px 20px;
         border-radius: 5px;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 20px;
         margin-left: auto;
     }
     .social-icons img {

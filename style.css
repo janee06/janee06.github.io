@@ -158,6 +158,9 @@ header nav a:hover {
     text-decoration: none;
     color: var(--main-font-color);
 }
+.contactbuttons a:hover {
+    color: var(--main-bg-color);
+}
 .buttons a:hover {
     color: var(--main-bg-color);
 }
@@ -188,7 +191,6 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     margin-left: 60px;
     color: var(--main-font-color);
     height: 800px;
@@ -252,9 +254,9 @@ header nav a:hover {
     flex-wrap: wrap;
     gap: 50px;
     grid-template-columns: auto auto auto;
-    align-items: center;
     justify-content: center;
     padding: 15px;
+    padding-top: 50px;
     color: var(--main-font-color);
 }
 .carousel-item {
@@ -503,6 +505,7 @@ footer {
     .image img {
         height: 170px;
         object-fit: cover;
+        width: 250px;
         min-width: 150px;
         margin-right: 25px;
         margin-top: 5px;
@@ -557,6 +560,7 @@ footer {
         display: flex;
         font-size: 2.5rem;
     }
+
     .TextButton {
         display: flex;
         align-items: center;
@@ -583,7 +587,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 0px;
+        margin-left: 50px;
     }
     .aboutImg img {
         flex-direction: column;
@@ -593,7 +597,7 @@ footer {
         align-items: center;
         object-fit: cover;
         min-width: 150px;
-        margin-left: 0px;
+        margin-left: 50px;
     }
 
     .myprojects h1 {
